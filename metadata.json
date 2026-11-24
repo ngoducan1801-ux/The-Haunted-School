@@ -1,0 +1,6 @@
+{
+  "name": "THE HAUNTED SCHOOL",
+  "description": "A realistic 3D first-person survival horror game set inside a massive abandoned school.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

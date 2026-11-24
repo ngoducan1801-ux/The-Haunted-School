@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+.font-horror {
+  font-family: 'Grenze Gotisch', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-horror-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+@keyframes horrorFlicker {
+  0%,
+  16%,
+  18%,
+  21%,
+  23%,
+  52%,
+  54%,
+  78%,
+  80%,
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter:
+      drop-shadow(0 6px 0 #120103)
+      drop-shadow(0 18px 34px rgba(0, 0, 0, 0.98))
+      drop-shadow(0 0 34px rgba(220, 38, 38, 0.92))
+      drop-shadow(0 0 82px rgba(127, 29, 29, 0.72));
+  }
+  17%,
+  22%,
+  53% {
+    opacity: 0.78;
+    transform: translate3d(-1.5px, 0.5px, 0) scale(0.998);
+    filter:
+      drop-shadow(0 6px 0 #120103)
+      drop-shadow(0 12px 24px rgba(0, 0, 0, 0.98))
+      drop-shadow(0 0 14px rgba(153, 27, 27, 0.45));
+  }
+  79% {
+    opacity: 0.92;
+    transform: translate3d(1.5px, -0.5px, 0) scale(1.005);
+    filter:
+      drop-shadow(0 6px 0 #120103)
+      drop-shadow(0 20px 38px rgba(0, 0, 0, 0.99))
+      drop-shadow(0 0 52px rgba(239, 68, 68, 0.96));
+  }
+}
+
+.horror-title-top {
+  font-family: 'Grenze Gotisch', 'Cormorant Garamond', Georgia, serif;
+  background-image: linear-gradient(180deg, #ffffff 0%, #e7e5e4 42%, #a8a29e 70%, #991b1b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.14em;
+  filter:
+    drop-shadow(0 4px 0 #120204)
+    drop-shadow(0 12px 26px rgba(0, 0, 0, 0.98))
+    drop-shadow(0 0 26px rgba(185, 28, 28, 0.65));
+}
+
+.horror-title-blood {
+  font-family: 'Grenze Gotisch', 'Cormorant Garamond', Georgia, serif;
+  background-image: linear-gradient(
+    180deg,
+    #fff5f5 0%,
+    #fca5a5 14%,
+    #ef4444 36%,
+    #b91c1c 64%,
+    #3b0608 98%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.08em;
+  animation: horrorFlicker 5.2s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .horror-title-blood {
+    animation: none;
+    transform: none;
+    filter:
+      drop-shadow(0 6px 0 #120103)
+      drop-shadow(0 18px 34px rgba(0, 0, 0, 0.98))
+      drop-shadow(0 0 34px rgba(220, 38, 38, 0.92));
+  }
+}
